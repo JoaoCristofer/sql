@@ -50,7 +50,7 @@
     JOIN Customers C ON O.CustomerID = C.CustomerID
     WHERE C.Country ILIKE 'BRASIL';
 
-34) SELECT P.ProductName, P.Price
+24) SELECT P.ProductName, P.Price
     FROM Products P
     JOIN OrderDetails OD ON P.ProductID = OD.ProductID
     JOIN Orders O ON OD.OrderID = O.OrderID
