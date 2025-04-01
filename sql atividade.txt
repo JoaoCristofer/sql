@@ -45,7 +45,7 @@ SELECT ProductID, ProductName FROM Products WHERE CategoryID != (SELECT Category
 
 23) SELECT OrderID, CustomerID, OrderDate FROM Orders WHERE CustomerID IN (SELECT CustomerID FROM Customers WHERE Country = 'BRASIL');
 
-34) SELECT ProductName, Price FROM Products WHERE ProductID IN (SELECT ProductID FROM OrderDetails WHERE OrderID IN (SELECT OrderID FROM Orders WHERE ShipperID = (SELECT ShipperID FROM Shippers WHERE ShipperName = 'BRASIL'))) ORDER BY Price DESC LIMIT 1;
+24) SELECT ProductName, Price FROM Products WHERE ProductID IN (SELECT ProductID FROM OrderDetails WHERE OrderID IN (SELECT OrderID FROM Orders WHERE ShipperID = (SELECT ShipperID FROM Shippers WHERE ShipperName = 'BRASIL'))) ORDER BY Price DESC LIMIT 1;
 
 25) SELECT OrderID, COUNT(*) AS ItemCount, SUM(Price * Quantity) AS TotalValue FROM OrderDetails GROUP BY OrderID;
 
